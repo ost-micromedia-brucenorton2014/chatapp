@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>marmalade</title>
+  <link rel="stylesheet" href="css/marmalade.css">
+  <link rel="stylesheet" href="css/styles_reset.css">
+</head>
+
+<body>
+  <h3>marmalade login</h3>
+  <section id="form-section">
+    <form id="login-form">
+      <label for="email">Email</label><br>
+      <input type="email" name="email" id="email" placeholder="name@example.com" required autocomplete="email"><br>
+
+      <label for="userpassword">Password</label><br>
+      <input type="password" name="userpassword" id="userpassword" placeholder="password" required><br>
+
+      <input type="submit" value="login" id="submit-button" />
+    </form>
+  </section>
+  <footer>
+    <nav>
+      <a href="./">home</a>
+      <a href="login.html">login</a>
+      <a href="signup.html">signup</a>
+      <a href="#signout" id="signout">signout</a>
+    </nav>
+  </footer>
+
+  <script src="js/login.js"></script>
+  <!--need to add readMesssages() for full signout??-->
+  <script src="js/signout.js"></script>
+</body>
+
+</html>

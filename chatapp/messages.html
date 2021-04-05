@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>marmalade</title>
+  <link rel="stylesheet" href="css/marmalade.css">
+  <link rel="stylesheet" href="css/styles_reset.css">
+</head>
+
+<body>
+  <h3>marmalade</h3>
+  <p>select a user to chat with</p>
+  <section id="users">
+    <p>users should go here</p>
+  </section>
+  <h3>messages</h3>
+  <section id="messages">
+    <p>messages should go here</p>
+  </section>
+  <h3>send message</h3>
+  <section id="form-section">
+    <form id="message-form" method="post">
+      <label for="message">message:</label><br>
+      <textarea id="message" name="message" placeholder="message..."></textarea>
+
+      <input type="submit" value="send" id="message-button" />
+    </form>
+  </section>
+
+  <footer>
+    <nav>
+      <a href="./">home</a>
+      <a href="login.html">login</a>
+      <a href="signup.html">signup</a>
+      <a href="#signout" id="signout">signout</a>
+    </nav>
+  </footer>
+
+  <script src="js/messages.js"></script>
+  <script src="js/signout.js"></script>
+</body>
+
+</html>
