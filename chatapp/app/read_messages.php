@@ -1,6 +1,7 @@
 <?php
   //connect to the database 
-  require_once('../_includes/connect.php');
+  /* note that this should not be readable from outside */
+  require_once('../../_includes/connect.php');
 
   ini_set('display_errors', 1);
   ini_set('display_startup_errors', 1);
@@ -14,10 +15,13 @@
 
 
   //write query
-  $query = "SELECT $tbl.messageID, $tbl.fromUser, $tbl.toUser, $tbl.message FROM $tbl WHERE $tbl.fromUser = ? AND $tbl.toUser = ?";
+  $query = "SELECT $tbl.messageID, $tbl.fromUser, $tbl.toUser, $tbl.message FROM $tbl WHERE $tbl.fromUser = ? AND $tbl.toUser = ?
+  UNION
+  SELECT $tbl.messageID, $tbl.fromUser, $tbl.toUser, $tbl.message FROM $tbl WHERE $tbl.fromUser = ? AND $tbl.toUser = ?
+  ORDER BY messageID";
   //prepare statement, execute, store_result
   if($displayStmt = $mysqli->prepare($query)){
-    $displayStmt->bind_param("ii", $fromUser, $toUser);
+    $displayStmt->bind_param("iiii", $fromUser, $toUser,$toUser,$fromUser);
     $displayStmt->execute();
     $displayStmt->store_result();
     $numResults = $displayStmt->num_rows;
