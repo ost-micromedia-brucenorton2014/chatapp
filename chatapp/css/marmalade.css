@@ -1,4 +1,6 @@
-.marmalade {
+.marmalade,
+h3,
+h4 {
   color: rgba(198, 110, 51, 1);
 }
 
