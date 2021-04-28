@@ -1,7 +1,7 @@
 <?php
   //connect to the database 
   /* note that this should not be readable from outside */
-  require_once('../../_includes/connect.php');
+  require_once('../_includes/connect.php');
 
   ini_set('display_errors', 1);
   ini_set('display_startup_errors', 1);
